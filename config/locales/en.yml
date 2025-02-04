@@ -1,0 +1,18 @@
+en:
+  authentication:
+    registrations:
+      signed_up: "Signed up successfully."
+      sign_up_failed: "Could not sign up."
+    sessions:
+      signed_in: "Signed in successfully."
+      signed_out: "Signed out successfully."
+  errors:
+    messages:
+      internal_server_error: "Internal server error"
+      not_found: "Not found"
+      rate_limit:
+        sensitive_endpoints: &rate_limit_message "Too many requests. Please try again later."
+        non_sensitive_endpoints: *rate_limit_message
+      unauthenticated: "Please sign in to continue."
+      password_complexity: "Password must include at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long"
+      invalid_email_format: "Email is invalid"

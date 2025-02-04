@@ -1,0 +1,19 @@
+one:
+  email: user1@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password123') %>
+  jti: <%= SecureRandom.uuid %>
+  first_name: John
+  last_name: Doe
+  registration_date: <%= Date.today %>
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>
+
+two:
+  email: user2@example.com
+  encrypted_password: <%= User.new.send(:password_digest, 'password123') %>
+  jti: <%= SecureRandom.uuid %>
+  first_name: Jane
+  last_name: Smith
+  registration_date: <%= Date.today %>
+  created_at: <%= Time.current %>
+  updated_at: <%= Time.current %>

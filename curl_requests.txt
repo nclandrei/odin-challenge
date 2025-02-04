@@ -1,0 +1,37 @@
+## Sign up
+curl -X "POST" "http://localhost:3000/users" \
+     -H 'Content-Type: application/json' \
+     -d $'{
+  "user": {
+    "email": "test@example.com",
+    "password": "Test12345!",
+    "last_name": "Doe",
+    "first_name": "John",
+    "password_confirmation": "Test12345!"
+  }
+}'
+
+## Get User
+curl "http://localhost:3000/user" \
+     -H 'Authorization: Bearer <insert_access_token_here>'
+
+## Refresh token
+curl -X "POST" "http://localhost:3000/auth/refresh_token.json" \
+     -H 'Content-Type: application/json' \
+     -d $'{
+  "refresh_token": "<insert_refresh_token_here>"
+}'
+
+## Logout
+curl -X "DELETE" "http://localhost:3000/users/sign_out" \
+     -H 'Authorization: Bearer <insert_access_token_here>'
+
+## Login
+curl -X "POST" "http://localhost:3000/users/sign_in" \
+     -H 'Content-Type: application/json' \
+     -d $'{
+  "user": {
+    "email": "test@example.com",
+    "password": "Test12345!"
+  }
+}'
